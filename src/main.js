@@ -23,23 +23,32 @@ let string = `/* 今天要画一个太极八卦图！
 /* 画一个小球
  */
 #div1::before{  
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 100%);
+    background: black;
     width:50%;
     height:50%;
     border-radius:50%;
     left:50%;
     transform:translateX(-50%);
+    
 }
 /* 再画一个小球
  */
 #div1::after{
-    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 100%);    
+    background: white;
     width:50%;
     height:50%;
     border-radius:50%;
     top:50%;
     left:50%;
     transform:translateX(-50%);
+}
+/* 在小球的中间再加一个小球
+*/
+#div1::before{  
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 100%);
+}
+#div1::after{
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 100%);    
 }
 `;
 let string2 = "";
